@@ -15,6 +15,7 @@ workflows:
           flutter build apk
 
     artifacts:
+      - android/app/build/outputs/**/*.apk
       - build/**/outputs/**/*.apk
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
