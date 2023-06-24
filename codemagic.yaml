@@ -13,6 +13,10 @@ workflows:
       - name: yedzav flutter run
         script: |
           flutter build apk
+    artifacts:
+      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/mapping.txt
+      - flutter_drive.log
 
     publishing:
       email:
@@ -21,4 +25,4 @@ workflows:
 
         notify:
           success: true
-          failure: false
+          failure: true
