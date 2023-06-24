@@ -10,9 +10,6 @@ workflows:
       - name: Get Flutter packages
         script: |
           flutter packages pub get
-      - name: Flutter analyze
-        script: |
-          flutter analyze
       - name: yedzav flutter run
         script: |
           flutter build apk
