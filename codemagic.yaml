@@ -19,7 +19,7 @@ workflows:
         ignore_failure: true
       - name: yedzav flutter run
         script : |
-        flutter run lib/main.dart 
+        flutter build android 
    
     publishing:
       email:
