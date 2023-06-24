@@ -24,6 +24,8 @@ workflows:
       email:
         recipients:
           - sangrampaste8897@gmail.com
+          - jadhavsahil1304@gmail.com
+          - virajkadam007.vk@gmail.com
 
         notify:
           success: true
