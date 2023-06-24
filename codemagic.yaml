@@ -4,8 +4,8 @@ workflows:
     max_build_duration: 120
 
     environment:
-      android_signing:
-        - keystore_reference
+      # android_signing:
+      #   - keystore_reference
       groups:
         - test
 
@@ -27,7 +27,7 @@ workflows:
           --bundle 'project_directory/build/**/outputs/**/*.aab' \
           --ks /tmp/keystore.keystore \
           --ks-pass $CM_KEYSTORE_PASSWORD \
-          --ks-key-alias "key" \
+          --ks-key-alias $CM_KEY_ALIAS \
           --key-pass $CM_KEY_PASSWORD
 
     artifacts:
