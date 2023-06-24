@@ -27,7 +27,7 @@ workflows:
           --bundle 'project_directory/build/**/outputs/**/*.aab' \
           --ks /tmp/keystore.keystore \
           --ks-pass $CM_KEYSTORE_PASSWORD \
-          --ks-key-alias "sahil" \
+          --ks-key-alias "key" \
           --key-pass $CM_KEY_PASSWORD
 
     artifacts:
