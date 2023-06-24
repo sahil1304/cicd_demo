@@ -13,6 +13,7 @@ workflows:
       - name: yedzav flutter run
         script: |
           flutter build apk
+
     artifacts:
       - build/**/outputs/**/*.apk
       - build/**/outputs/**/mapping.txt
@@ -21,7 +22,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - jadhavsahil1304@gmail.com
+          - sangrampaste8897@gmail.com
 
         notify:
           success: true
