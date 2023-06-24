@@ -12,11 +12,11 @@ workflows:
           flutter packages pub get
       - name: yedzav flutter run
         script: |
-          flutter build apk
+          flutter build appbundle --release
 
     artifacts:
       - android/app/build/outputs/**/*.apk
-      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
 
