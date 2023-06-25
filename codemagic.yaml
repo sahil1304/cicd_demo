@@ -29,8 +29,8 @@ workflows:
 
       - name: flutter run
         script: |
-          # flutter build appbundle
-          flutter build apk
+          # flutter build appbundle --stacktrace
+          flutter build apk --stacktrace --verbose
 
       - name: Build universal apk
         script: |
