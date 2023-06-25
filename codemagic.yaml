@@ -24,9 +24,10 @@ workflows:
         script: |
           flutter packages pub get
 
-      - name: yedzav flutter run
+      - name: flutter run
         script: |
-          flutter build appbundle --release
+          # flutter build appbundle
+          flutter build apk
 
       - name: Build universal apk
         script: |
