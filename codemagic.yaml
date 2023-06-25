@@ -14,7 +14,7 @@ workflows:
     scripts:
       - name: Set up keystore
         script: |
-          echo $CM_KEYSTORE | base64 --decode > tmp/keystore.keystore
+          echo $CM_KEYSTORE | base64 --decode > $CM_BUILD_DIR/codemagic.keystore
 
       - name: Set up local.properties
         script: |
@@ -32,7 +32,7 @@ workflows:
         script: |
           android-app-bundle build-universal-apk \
           --bundle 'project_directory/build/**/outputs/**/*.aab' \
-          --ks $CM_KEYSTORE_PATH \
+          --ks $CM_BUILD_DIR/codemagic.keystore \
           --ks-pass $CM_KEYSTORE_PASSWORD \
           --ks-key-alias $CM_KEY_ALIAS \
           --key-pass $CM_KEY_PASSWORD
