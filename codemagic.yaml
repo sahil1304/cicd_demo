@@ -8,8 +8,8 @@ workflows:
       #   - keystore_reference
       groups:
         - keystore_credentials
-      vars:
-        CM_KEYSTORE_PATH: $CM_BUILD_DIR/codemagic.keystore
+      # vars:
+      #   CM_KEYSTORE_PATH: $CM_BUILD_DIR/codemagic.keystore
 
     scripts:
       - name: Set up keystore
@@ -19,13 +19,14 @@ workflows:
       - name: Set up local.properties
         script: |
           echo "flutter.sdk=$HOME/programs/flutter" > "$CM_BUILD_DIR/android/local.properties"
+
       - name: Get Flutter packages
         script: |
           flutter packages pub get
+
       - name: yedzav flutter run
         script: |
-          # flutter build apk
-          flutter build apk
+          flutter build appbundle --release
 
       - name: Build universal apk
         script: |
