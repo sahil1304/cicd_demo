@@ -8,11 +8,11 @@ workflows:
       #   - keystore_reference
       groups:
         - keystore_credentials
-      vars:
-        CM_KEYSTORE_PATH: $CM_BUILD_DIR/codemagic.keystore
-        CM_KEYSTORE_PASSWORD: $CM_BUILD_DIR/codemagic.keystore
-        CM_KEY_ALIAS: $CM_BUILD_DIR/codemagic.keystore
-        CM_KEY_PASSWORD: $CM_BUILD_DIR/codemagic.keystore
+      # vars:
+      #   CM_KEYSTORE_PATH: $CM_BUILD_DIR/codemagic.keystore
+      #   CM_KEYSTORE_PASSWORD: $CM_BUILD_DIR/codemagic.keystore
+      #   CM_KEY_ALIAS: $CM_BUILD_DIR/codemagic.keystore
+      #   CM_KEY_PASSWORD: $CM_BUILD_DIR/codemagic.keystore
 
     scripts:
       - name: Set up keystore
