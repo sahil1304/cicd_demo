@@ -30,7 +30,7 @@ workflows:
       - name: flutter run
         script: |
           # flutter build appbundle --stacktrace
-          flutter build apk --stacktrace --verbose
+          flutter build apk --verbose
 
       - name: Build universal apk
         script: |
