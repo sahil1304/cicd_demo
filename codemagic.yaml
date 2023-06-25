@@ -31,7 +31,7 @@ workflows:
           --key-pass $CM_KEY_PASSWORD
 
     artifacts:
-      # - build/**/outputs/**/**/*.aab
+      - build/**/outputs/**/*.aab
       - build/**/outputs/**/*.apk
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
