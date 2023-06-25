@@ -2,12 +2,14 @@ workflows:
   android-workflow:
     name: Android Workflow
     max_build_duration: 120
-    CM_KEYSTORE_PATH: $CM_BUILD_DIR/codemagic.keystore
+
     environment:
       # android_signing:
       #   - keystore_reference
       groups:
         - keystore_credentials
+      vars:
+        CM_KEYSTORE_PATH: $CM_BUILD_DIR/codemagic.keystore
 
     scripts:
       - name: Set up keystore
